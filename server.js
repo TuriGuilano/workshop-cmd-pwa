@@ -24,10 +24,9 @@ nunjucks.configure(baseDir, {
 });
 
 app.get('*', (req, res, next) => {
-    res.render(path.join('./', req.url, 'index.html'), {});
+    res.render(path.join('./', req.path, 'index.html'), {});
 });
 
 app.listen(port, (err) => {
     err ? console.error(err) : console.log(`app running on http://localhost:${port}`);
 });
-
