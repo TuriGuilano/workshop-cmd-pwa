@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     {% include './app-meta.html' %}
-
+    <link rel="manifest" href="/manifest.json" />
     <link href="/dist/css/fonts.css" rel="stylesheet">
     <link href="/dist/css/bootstrap.css" rel="stylesheet">
     <link href="/assets/css/src/docs.css" rel="stylesheet">
@@ -19,5 +19,14 @@
     <script src="/assets/js/docs.min.js"></script>
     <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
     {% block scripts_extra %}{% endblock %}
+
+    <script>
+
+    if ('serviceWorker' in navigator) {
+      //defineer geen scope hier anders runt het alleen maar langs deze page.
+      navigator.serviceWorker.register('/sw.js');
+    }
+
+    </script>
 </body>
 </html>

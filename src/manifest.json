@@ -1,0 +1,16 @@
+{
+  "short_name": "Bootstrap",
+  "name": "Twitter Bootstrap Documentation",
+  "start_url": "/?homescreen=1",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#523979",
+  "background_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
